@@ -1,10 +1,10 @@
 function playGame() {
+    
     $("#level-title").text("Level " + gameItems.level);
     var newItem = gameItems.map[Math.floor(Math.random()*4)];
     gameItems.seq.push(newItem);
     buttonPress(newItem);
     
-
     $(".btn").click(function() {
         console.log(gameItems.running);
         var color = $(this).attr("id");
@@ -56,7 +56,6 @@ function reset() {
     gameItems.curr = 0;
     gameItems.running = 0;
 }
-
 
 function playAudio(name) {
     audio = new Audio("sounds/" + name + ".mp3");
